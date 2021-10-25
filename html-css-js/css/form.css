@@ -1,0 +1,147 @@
+
+body {
+  
+  /* font-family: "Comic Sans MS", "Comic Sans", cursive; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #82C0CC;
+  
+}
+
+@keyframes movingGradient {
+  from {background-position: 0 0; }
+  to { background-position: 100% 100%;}
+}
+
+#task-frontend {
+  color: #104A56;
+  
+  background-image: linear-gradient(
+    to bottom right,
+    #2095AC 0%, #489FB5 40%, #EDE7E3 60%, #FFA62B 100%
+  );
+
+  background-size: 200% 200%;
+  animation: movingGradient 5s linear infinite alternate;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /* border: 4px s rgb(26, 61, 221); */
+  border-radius: 30px;
+  box-shadow: 20px 20px 23px 0px rgba(66, 68, 90, 1);
+
+  
+	width: 350px;
+  height: 500px;
+
+  margin: 0;
+
+	text-align: center;
+
+  
+  background-color: rgb(242, 255, 255);
+
+}
+
+
+/*
+jeśli widzisz dwa elementy (A, B) oddzielone spacją, oznacza to, że modyfikujemy wszystkie elementy B, które zawierają się w A.
+W poniższym przypadku modyfikujemy wszystkie elementy z klasą "basic-title", które znajdują się w elemencie o id "task-frontend".
+*/
+#task-frontend .basic-title {
+  color: #104A56;
+  padding: 20px;
+  font-size: large;
+}
+
+#sections-title{
+  color: #104A56;
+  font-size: large;
+  padding: 20px;
+}
+
+#task-frontend .form-line {
+  border: 1px solid blue;
+}
+
+
+/*
+znasz już sposób definiowania selektorów.
+Oczywiście nie przerobiliśmy jeszcze wszystkich. W związku z tym zachęcam Cię do zapoznania się z innymi selektorami, np. tutaj:
+https://www.w3schools.com/cssref/css_selectors.asp
+Chciałbym, byś przeanalizowała / przeanalizował poniższe style i zmodyfikować je według własnego uznania.
+*/
+
+#task-frontend form>label {
+  text-transform: uppercase;
+	margin: 10px auto 0 auto;
+  color: #104A56;
+}
+
+#task-frontend input[type="text"], #task-frontend input[type="email"] {
+  display: block;
+  margin: 20px auto;
+  border: 0;
+  /* border: 1px solid black; */
+  box-shadow: inset 1px 1px 5px 0px rgba(66, 68, 90, 1);
+  width: 250px;
+  height: 30px;
+  border-radius: 15px;
+  padding: 4px;
+}
+
+#task-frontend span {
+  display: block;
+  margin: 20px;
+}
+
+#task-frontend input[type="checkbox"] {
+	border: 1px solid red;
+	text-transform: none;
+}
+
+
+
+#task-frontend .your_choice {
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0;
+  justify-content: left;
+  align-items: left;
+}
+
+.your_choice li {
+  font-size: 15px;
+  text-align: left;
+
+  align-items: left;
+  display: block;
+  float: left;
+  width: 30%;
+  text-transform: lowercase;
+  margin-left: 15%;
+}
+
+#task-frontend input[type="submit"] {
+  text-align: center;
+  background-color: #2095AC;
+	color: #FFF;
+  border-radius: 30px;
+  /* border: 0; */
+	margin: 30px;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+}
+
+#send {
+  border: 0;
+}
+#send:hover {
+  border: 2px solid black;
+}
